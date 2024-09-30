@@ -6,3 +6,13 @@ export interface MovieType {
   voteAverage: number;
   releaseDate: string;
 }
+
+export interface ReviewType {
+  movieId: number;
+  reviewId: number;
+  password: number;
+  title: string;
+  content: string;
+  createdAt: string;
+  updatedAt: string;
+}
