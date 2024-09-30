@@ -25,7 +25,7 @@ const Header = () => {
         <Link href={"/"}>
           <p>홈</p>
         </Link>
-        <p>장르</p>
+        {/* <p>장르</p> */}
       </S.Menu>
       <S.SearchBox>
         <input
