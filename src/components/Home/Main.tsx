@@ -37,7 +37,7 @@ const Main = () => {
   );
 };
 
-const Layer = styled.div`
+export const Layer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(17vw, auto));
   justify-content: space-between;
@@ -58,7 +58,7 @@ const Layer = styled.div`
   }
 `;
 
-const Title = styled.div`
+export const Title = styled.div`
   padding: 120px 80px 16px;
 `;
 
