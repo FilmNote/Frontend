@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ReviewType } from "@/types/movie";
 import { marked } from "marked";
+import Comment from "../Comment";
 
 const ReviewDetail = () => {
   const { id, reviewId } = useParams();
@@ -64,6 +65,7 @@ const ReviewDetail = () => {
     }
     router.push(`/movie/${id}/review/edit/${reviewId}?password=${password}`);
   };
+
   return (
     <S.Container>
       {review && (
@@ -75,7 +77,6 @@ const ReviewDetail = () => {
           <S.Preview
             dangerouslySetInnerHTML={{ __html: marked(review.content) }}
           />
-
           <S.Buttons>
             <S.PasswordInput
               type="password"
@@ -86,6 +87,7 @@ const ReviewDetail = () => {
             <S.EditButton onClick={handleEdit}>수정하기</S.EditButton>
             <S.DeleteButton onClick={handleDelete}>삭제하기</S.DeleteButton>
           </S.Buttons>
+          <Comment reviewId={reviewId} />
         </>
       )}
     </S.Container>

@@ -16,3 +16,10 @@ export interface ReviewType {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface CommentType {
+  id: number;
+  reviewId: number;
+  content: string;
+  createdAt: string;
+}
